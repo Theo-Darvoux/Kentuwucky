@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWINT 2027</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Fix viewport height on mobile to prevent layout shift when address bar appears/disappears
+    function setViewportHeight() {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    setViewportHeight();
+    window.addEventListener('resize', setViewportHeight);
+    window.addEventListener('orientationchange', setViewportHeight);
+  </script>
+</head>
+<div id="image-viewer" class="image-overlay">
+  <span class="close-viewer">&times;</span>
+  <img class="viewer-content" id="full-image">
+</div>
+
+<body>
+
+
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo"><img src="images/logo.png">AWINT 2027</div>
+      <nav class="nav-links">
+        <a href="index.html">HOMME</a>
+        <a href="orga.html">OWGANNIGWRAMME</a>
+        <a href="nous.html">LA TCHEAM</a>
+        <a href="events.html">EWENTS</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+
+
+    <!-- ABOUT (Sticky Image Scroll Section) -->
+    <section id="about" class="about-text-section">
+      <div class="about-text-container">
+        <h2 class="stroke">
+          Cawlendwiew de campagne OwO
+        </h2>
+      </div>
+    </section>
+
+
+
+
+    <section class="events-list-section">
+      <div class="events-container">
+        <h2 class="section-title">Nos Évènementws owo</h2>
+
+        <div class="event-row" data-date="2026-02-12">
+          <div class="event-date">
+            <span class="day text-outline">12</span>
+            <span class="month">Janvier</span>
+          </div>
+          <div class="event-info">
+            <h3>Dépôt des wistes</h3>
+            <p>Le début de l'aventuwe Kentucky avec vouuus owo.</p>
+          </div>
+        </div>
+
+        <div class="event-row" data-date="2026-02-18">
+          <div class="event-date">
+            <span class="day text-outline">18</span>
+            <span class="month">Janvier</span>
+          </div>
+          <div class="event-info">
+            <h3>Choppe, Choppe Ohn Ice uwu</h3>
+            <p>Ritz avec bawbe à papa, stand photo et bowwing humain à la patinowie owo.</p>
+          </div>
+        </div>
+
+        <div class="event-row" data-date="2026-02-23">
+          <div class="event-date">
+            <span class="day text-outline">23</span>
+            <span class="month">Janvier</span>
+          </div>
+          <div class="event-info">
+            <h3>Amphi des wistes</h3>
+            <p>Clip de pwésentation Kentucky, chowéogwaphie, et weveaw de ce magnifwique site >w<.</p>
+          </div>
+        </div>
+
+        <div class="event-row" data-date="2026-03-11">
+          <div class="event-date">
+            <span class="day text-outline">11</span>
+            <span class="month">Mars</span>
+          </div>
+          <div class="event-info">
+            <h3>1 son, 1 heuwe @EwvyOne</h3>
+            <p>Vouuus pouwewrez assisstew aux incwoyables Kentuckfwéestyles owo.</p>
+          </div>
+        </div>
+
+        <div class="event-row" data-date="2026-03-16">
+          <div class="event-date">
+            <span class="day text-outline">13-16</span>
+            <span class="month">Mars</span>
+          </div>
+          <div class="event-info">
+            <h3>WeewkEnd au Ski owo</h3>
+            <p>Twwois jouws où on vous wégawwe à coup de soinées et de tawtifwette nomnom.</p>
+          </div>
+        </div>
+
+        <div class="event-row" data-date="2026-04-02">
+          <div class="event-date">
+            <span class="day text-outline">2</span>
+            <span class="month">Avril</span>
+          </div>
+          <div class="event-info">
+            <h3>Assowwympiades owo</h3>
+            <p>On wawn Vegas dans les divwes associations et cwubs du campus autouw du spowt uwu.</p>
+          </div>
+        </div>
+        <div class="event-row" data-date="2026-04-20">
+          <div class="event-date">
+            <span class="day text-outline">20</span>
+            <span class="month">Avril</span>
+          </div>
+          <div class="event-info">
+            <h3>Joute des wistes</h3>
+            <p>We: On wawn Vegas dans divwes disciplines spowtives owo.</p>
+          </div>
+        </div>
+
+        <div class="event-row" data-date="2026-04-22">
+          <div class="event-date">
+            <span class="day text-outline">21/22</span>
+            <span class="month">Avril</span>
+          </div>
+          <div class="event-info">
+            <h3>Animation AbsINThe owo</h3>
+            <p>On fait des activitwés en GS et on sewwt des bowssons uwu.</p>
+          </div>
+        </div>
+
+        <div class="event-row" data-date="2026-04-23">
+          <div class="event-date">
+            <span class="day text-outline">23</span>
+            <span class="month">Avril</span>
+          </div>
+          <div class="event-info">
+            <h3>Jouwnée de campagne</h3>
+            <p>Passez voiwr notwe incwoyable stand au fowum ! owo</p>
+          </div>
+        </div>
+
+        <div class="event-row" data-date="2026-04-23">
+          <div class="event-date">
+            <span class="day text-outline">23</span>
+            <span class="month">Avril</span>
+          </div>
+          <div class="event-info">
+            <h3>Débats des wistes & clip owo</h3>
+            <p>Diffusion d'un clip wécapiwulatif de la campagne à 20h en amphi 10. <br>Puis, on se fait allumew pouw
+              tout ce qu'on à fait depuis le dépwot owo.</p>
+          </div>
+        </div>
+
+        <div class="event-row" data-date="2026-04-24">
+          <div class="event-date">
+            <span class="day text-outline">24</span>
+            <span class="month">Avril</span>
+          </div>
+          <div class="event-info">
+            <h3>Votes et wesuwtats owo</h3>
+            <p>N'oubwiez pas d'allew votew pouw nous de 8h à 18h.<br>Le dépouiwewment awra lieu à 20h au local AWINT uwu.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+    <!-- COLLECTIONS -->
+    <section class="stack-section">
+      <div class="photo-card">
+        <span class="card-label">Dépwot des wistes owo</span>
+        <img src="images/depot.png" alt="Description 1" onclick="openFullscreen(this)">
+      </div>
+      <div class="photo-card">
+        <span class="card-label">Bowling COI</span>
+        <img src="images/coi.png" alt="Description 2" onclick="openFullscreen(this)">
+      </div>
+      <div class="photo-card">
+        <span class="card-label">Stand COI</span>
+        <img src="images/stand_coi.png" alt="Description 3" onclick="openFullscreen(this)">
+      </div>
+      <div class="photo-card">
+        <span class="card-label">After COI</span>
+        <img src="images/after1.png" alt="Description 3" onclick="openFullscreen(this)">
+      </div>
+    </section>
+
+
+
+
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-label">mon snap</div>
+        <div>psders@kentucky2026.fr
+        </div>
+      </div>
+      <div>
+        <div class="footer-label">Cwéateur owo</div>
+        <div>psders</div>
+      </div>
+      <div>
+        <div class="footer-label">lait gal</div>
+        <div>© 2067 owoINT</div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script>
+
+    function markPastEvents() {
+      const rows = document.querySelectorAll('.event-row');
+      const today = new Date();
+      // Reset today to midnight for a fair comparison
+      today.setHours(0, 0, 0, 0);
+
+      rows.forEach(row => {
+        const eventDateStr = row.getAttribute('data-date');
+        if (eventDateStr) {
+          const eventDate = new Date(eventDateStr);
+          if (eventDate < today) {
+            row.classList.add('past');
+          }
+        }
+      });
+    }
+
+    // Run the check when the page loads
+    window.addEventListener('DOMContentLoaded', markPastEvents);
+
+
+    const viewer = document.getElementById('image-viewer');
+    const fullImg = document.getElementById('full-image');
+
+    function openFullscreen(imgElement) {
+      // Look for the elements at the moment of the click
+
+      viewer.style.display = 'flex';
+      fullImg.src = imgElement.src;
+    }
+
+    // 2. This will now work because 'viewer' is defined above
+    viewer.onclick = function (e) {
+      // If the user clicks the background (viewer) or the 'X', but NOT the image
+      if (e.target !== fullImg) {
+        viewer.style.display = 'none';
+      }
+    };
+
+  </script>
+
+
+
+
+</body>
+
+</html>

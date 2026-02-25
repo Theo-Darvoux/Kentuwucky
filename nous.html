@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWINT 2027</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Fix viewport height on mobile to prevent layout shift when address bar appears/disappears
+    function setViewportHeight() {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    setViewportHeight();
+    window.addEventListener('resize', setViewportHeight);
+    window.addEventListener('orientationchange', setViewportHeight);
+  </script>
+</head>
+<div id="image-viewer" class="image-overlay">
+  <span class="close-viewer">&times;</span>
+  <img class="viewer-content" id="full-image">
+</div>
+
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo"><img src="images/logo.png">AWINT 2027</div>
+      <nav class="nav-links">
+        <a href="index.html">HOMME</a>
+        <a href="orga.html">OWGANNIGWRAMME</a>
+        <a href="nous.html">LA TCHEAM</a>
+        <a href="events.html">EWENTS</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+
+
+
+
+    <!-- ABOUT (Sticky Image Scroll Section) -->
+    <section id="about" class="about-text-section">
+      <div class="about-text-container">
+        <h2>
+          Appwwennez à mieux nous connaiwtew OwO !
+        </h2>
+      </div>
+    </section>
+
+
+    <section class="exhibitions">
+      <div class="exhibitions-container" id="main-exhibition-container">
+
+        <div class="exhibitions-left">
+          <div class="exhibitions-left">
+            <div class="entete">
+              <select id="pole-select" onchange="switchPole(this.value)">
+                <option value="presidence">Pwésidence owo</option>
+                <option value="secretariat">Secwetawiawt</option>
+                <option value="tresorerie">Twestowewie</option>
+                <option value="comm">Pôle Commwnicawtion</option>
+                <option value="soiree">Pôle Soiwée</option>
+                <option value="event">Pôle Event uwu</option>
+                <option value="prevention">Pôle Pwévention</option>
+                <option value="re">Pôle Welations entwepwises</option>
+                <option value="miam">Pôle Miam Miam (nomnom)</option>
+                <option value="createur">Pôle Cwéation</option>
+                <option value="secu">Pôle Sécu-wogie</option>
+                <option value="honor">Mentwions hono'wables</option>
+                <option value="ajyad">Pôle Ajyad owo</option>
+              </select>
+            </div>
+          </div>
+          <div class="exhibit-img">
+            <img id="main-member-img" class="main-img" src="images/max_fun.png">
+          </div>
+        </div>
+
+        <div class="exhibitions-right">
+          <div class="description-container">
+            <h2 id="display-member-name" class="member-name">Maxence LEFEU — Pwésidence owo</h2>
+            <p id="display-member-text" class="member-text">« J’ouvwe Winamax plus que WhatsApp hehe UwU »</p>
+          </div>
+
+          <div id="thumbnail-grid" class="thumbnail-grid">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- COLLECTIONS -->
+    <section class="stack-section">
+      <div class="photo-card">
+        <span class="card-label">EVWY -> PAWIS à pied (offwande) owo</span>
+        <img src="images/parisevry1.png" alt="Description 1" onclick="openFullscreen(this)">
+      </div>
+      <div class="photo-card">
+        <span class="card-label">EVWY -> PAWIS à pied (offwande) owo</span>
+        <img src="images/parisevry2.png" alt="Description 2" onclick="openFullscreen(this)">
+      </div>
+      <div class="photo-card">
+        <span class="card-label">kidnapping de Miwo (offwande) owo</span>
+        <img src="images/kidnapping.png" alt="Description 3" onclick="openFullscreen(this)">
+      </div>
+      <div class="photo-card">
+        <span class="card-label">kidnapping de Miwo (offwande) owo</span>
+        <img src="images/bk.png" alt="Description 4" onclick="openFullscreen(this)">
+      </div>
+      <div class="photo-card">
+        <span class="card-label">Première tenture</span>
+        <img src="images/tenture.png" alt="Description 5" onclick="openFullscreen(this)">
+      </div>
+      <div class="photo-card">
+        <span class="card-label">Apéro AWINT</span>
+        <img src="images/apero.png" alt="Description 6" onclick="openFullscreen(this)">
+      </div>
+      <div class="photo-card">
+        <span class="card-label">Tournage du clip de présentation</span>
+        <img src="images/clip1.png" alt="Description 7" onclick="openFullscreen(this)">
+      </div>
+      <div class="photo-card">
+        <span class="card-label">Tournage du clip de présentation</span>
+        <img src="images/clip2.png" alt="Description 8" onclick="openFullscreen(this)">
+      </div>
+    </section>
+
+
+
+
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-label">mon snap</div>
+        <div>psders@kentucky2026.fr
+        </div>
+      </div>
+      <div>
+        <div class="footer-label">Cwéateur owo</div>
+        <div>psders</div>
+      </div>
+      <div>
+        <div class="footer-label">lait gal</div>
+        <div>© 2067 owoINT</div>
+      </div>
+    </div>
+  </footer>
+  <script>
+
+    const poleData = {
+      presidence: {
+        members: [
+          { name: "Maxence LEFEU — Pwésidence owo", img: "images/max_fun.png", text: "« J’ouvwe Winamax plus que WhatsApp hehe UwU »" },
+          { name: "Mattouz0 — VP Bwachewlow", img: "images/math_fun.png", text: "« Geek le jouw, fait tawd la nuit owo »" },
+          { name: "Théophane — VP TSP owo", img: "images/theo_fun.png", text: "« Je suis le sosie du fwèwe de Baki (le mec de la MMA) >w< »" },
+          { name: "Ryan — VVP TSP owo", img: "images/ryan_fun.png", text: "« Ca fait bcp de pwésidents tt ca owo »" },
+          { name: "Ilyes — VP IMT-BS owo", img: "images/ilyes_fun.png", text: "« 110000$ la vwoituwe owo »" },
+          { name: "Warren — VP FISA owo", img: "images/warren_fun.png", text: "« Pas fâché, justwe fatigué owo »" }
+        ]
+      },
+      secretariat: {
+        members: [
+          { name: "Aram — Gwand Secwetaiwe owo", img: "images/aram_fun.png", text: "« Il aiiime les pieds #PWOUDFEETLOVER »" },
+          { name: "Clementine — Vice Secwetaiwe", img: "images/clementine_fun.png", text: "« Team glace à la fwawise ma zéwo fwawises dans l'assiette owo »" }
+        ]
+      },
+      tresorerie: {
+        members: [
+          { name: "Léonard — Gwand Twésowiew", img: "images/leonard_fun.png", text: "« Il a casse la vwoituwe de sa soeuw »" },
+          { name: "Rayan O — Petit twésowiew aux gwandes joues", img: "images/rayan_o_fun.png", text: "« Ses joues awwivent toujouws suwr la photo avawnt lui owo »" }
+        ]
+      },
+      comm: {
+        members: [
+          { name: "Nabil — Pôle Commwnicawtion owo", img: "images/nabil_fun.png", text: "« Sa photo est dewvenue un stickew intwernationaw pendant la CAN >w< »" },
+          { name: "Swann — Pôle Commwnicawtion", img: "images/swann_fun.png", text: "« C'est la vegane du gwoupe owo »" },
+          { name: "Maya — Pôle Commwnicawtion", img: "images/maya_fun.png", text: "« Le voyage en Cowée a pwèsque fini dans une secte owo »" },
+          { name: "Ryan — Wespo Commwnicawtion", img: "images/ryan_fun.png", text: "« Même po peuww »" }
+        ]
+      },
+      soiree: {
+        members: [
+          { name: "Timothé — Wespo Soiwée", img: "images/tim_fun.png", text: "« Lors d'une soiwée il a pisse dans la bouteiwe d'une pewsonne et elle n'a wien vu owo »" },
+          { name: "Janelle — Pôle Soiwée", img: "images/janelle_fun.png", text: "« Ca c'est elle avawnt de vomiw sur les canapés de metwopolis owo »" },
+          { name: "Chloé — Pôle Soiwée", img: "images/chloe_fun.png", text: "« Le twwuc suwr sa tête est awrivé appwes le twoisieme vwerre owo »" },
+          { name: "Laura — Pôle Soiwée", img: "images/laura_fun.png", text: "« elle ne mwa pas envoywe la photo quand je l'ai demwandé owo »" }
+        ]
+      },
+      event: {
+        members: [
+          { name: "Pablo — Wespo Event", img: "images/pablo_fun.png", text: "« Il pisse dans des pots de fweuws de la tewwasse chez lui pour pwofiter de la vwue owo »" },
+          { name: "Asma — Pôle Event owo", img: "images/asma_fun.png", text: "« Saoule mais toujouws plus stable en talons que toi en basqwettes owo »" },
+          { name: "Junior — Pôle Event", img: "images/junior_fun.png", text: "« Il aime la patissiewe mais la patissiewe ne l'aime paws owo »" },
+          { name: "Samuel — Pôle Event", img: "images/sam_fun.png", text: "« Son fwein a failli y pawssew a cause de trop se fwotter en jean avec un awbre owo »" }
+        ]
+      },
+      prevention: {
+        members: [
+          { name: "Robinson — Wespo Pvrev", img: "images/robinson_fun.png", text: "« Il awime Adwien owo »" },
+          { name: "Adrien — Pôle Pvrev", img: "images/adrien_fun.png", text: "« Il awime Wobinson owo »" },
+          { name: "Matteo — Pôle Pvrev", img: "images/matteo_fun.png", text: "« Il awime Matteo owo »" }
+        ]
+      },
+      re: {
+        members: [
+          { name: "Sixtine — Wespo RE", img: "images/sixtine_fun.png", text: "« No Comment owo »" },
+          { name: "Assiya — Pôle RE owo", img: "images/assia_fun.png", text: "« Elle awime se baladew en cadis owo »" }
+        ]
+      },
+      miam: {
+        members: [
+          { name: "Ayoub — Gwand chef étoilé owo", img: "images/ayoub_fun.png", text: "« Le début d'un pwojet cheveuwx long plus long que one piece owo »" },
+          { name: "Pedro — fiew commis des cuisines de Kentucky owo", img: "images/pedro_fun.png", text: "« il na pas donne de photo non plus owo »" },
+          { name: "Antony — nowtre sanji owo", img: "images/antony_fun.png", text: "« Il a quitté le foot pouw le ping pong juste pouw testew... et il y est encowe owo »" }
+        ]
+      },
+      createur: {
+        members: [
+          { name: "Jérémie - Omniposcient Cwéateuw de Tout owo", img: "images/moi_fun.png", text: "« le chokwola c bon mais ca fait atchoum owo »" },
+          { name: "Julia - Pôle num owo", img: "images/julia_fun.png", text: "« Un sourire innocent... ou pas owo »" }
+        ]
+      },
+      secu: {
+        members: [
+          { name: "Ennio - Wespo Secu owo", img: "images/ennio_fun.png", text: "« a compweter owo »" },
+          { name: "Ajyad - emploi fictif awu Pôle Secu owo", img: "images/ajyad_fun.png", text: "« Askip il est awu pole seculogie owo »" }
+        ]
+      },
+      honor: {
+        members: [
+          { name: "Gaétan - a t'il weussi a wecupere ses 100 euwros? owo", img: "images/gaetan_fun.png", text: "« Le skin de chicha plus chewe que ta maison owo »" },
+          { name: "Elio - le devwopwemewnt du quoi ? owo", img: "images/elio_fun.png", text: "« Aussi pwésent a TSP que Bawdella a l'assmblée owo »" }
+        ]
+      },
+      ajyad: {
+        members: [
+          { name: "Ajyad - le bg ultime owo", img: "images/ajyad2.png", text: "« l'homme hassagi owo »" },
+          { name: "Ajyad - tu veux l'heure ? owo", img: "images/ajyad3.png", text: "« hmmmm il est 16h, je vais awler pwandwe un goûtew owo »" },
+          { name: "Ajyad - OH! owo", img: "images/ajyad1.png", text: "« l'homme suwpis owo »" },
+          { name: "le cwack — objectiw TD TSP X HEC owo", img: "images/ajyad_fun.png", text: "« je dors et je te majowe owo »" }
+        ]
+      }
+    };
+
+    function switchPole(poleKey) {
+      const data = poleData[poleKey];
+      const grid = document.getElementById('thumbnail-grid');
+
+      // Clear and Repopulate Thumbnails
+      grid.innerHTML = '';
+      data.members.forEach((member) => {
+        const img = document.createElement('img');
+        img.src = member.img;
+        img.className = 'thumb';
+        img.style = "width:100px; height:100px; border-radius:50%; cursor:pointer;";
+        img.onclick = () => updateGallery(member.img, member.name, member.text);
+        grid.appendChild(img);
+      });
+
+      // Set first member of the pole as default view
+      updateGallery(data.members[0].img, data.members[0].name, data.members[0].text);
+    }
+
+    function updateGallery(imgSrc, name, text) {
+      document.getElementById('main-member-img').src = imgSrc;
+      document.getElementById('display-member-name').innerText = name;
+      document.getElementById('display-member-text').innerHTML = text;
+    }
+
+
+
+
+
+    // Start with Presidency on page load
+    window.addEventListener('DOMContentLoaded', () => (switchPole('presidence')));
+
+
+
+
+
+    const viewer = document.getElementById('image-viewer');
+    const fullImg = document.getElementById('full-image');
+
+    function openFullscreen(imgElement) {
+      // Look for the elements at the moment of the click
+
+      viewer.style.display = 'flex';
+      fullImg.src = imgElement.src;
+    }
+
+    // 2. This will now work because 'viewer' is defined above
+    viewer.onclick = function (e) {
+      // If the user clicks the background (viewer) or the 'X', but NOT the image
+      if (e.target !== fullImg) {
+        viewer.style.display = 'none';
+      }
+    };
+  </script>
+</body>
+
+</html>

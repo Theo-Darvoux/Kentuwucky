@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWINT 2027</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* --- THE BOX CONTAINER --- */
+    .carousel-section {
+      width: 90%;
+      /* Width of the box */
+      max-width: 1600px;
+      /* Maximum width on large screens */
+      height: 800px;
+      /* Fixed height for the box */
+      margin: 50px auto;
+      /* Centers the box and adds vertical spacing */
+      background: var(--card-bg);
+      /* Pale card background to match kawaii palette */
+      border: 2px solid rgba(202,163,255,0.18);
+      /* Subtle violet border */
+      border-radius: 20px;
+      /* Rounded corners */
+      box-shadow: 0 20px 50px rgba(58,13,58,0.08);
+      /* Soft violet shadow for depth */
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      /* Clips the 3D elements inside the box */
+      position: relative;
+      touch-action: none;
+    }
+
+    .scene {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform-style: preserve-3d;
+      pointer-events: auto;
+    }
+
+    .carousel-wheel img {
+      width: 120px;
+      height: auto;
+      border-radius: 8px;
+      user-select: none;
+      transition: transform 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .carousel-section {
+        height: 400px;
+        /* Shorter box on mobile */
+        width: 95%;
+      }
+
+      .carousel-wheel img {
+        width: 80px;
+      }
+    }
+  </style>
+  <script>
+    function setViewportHeight() {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    setViewportHeight();
+    window.addEventListener('resize', setViewportHeight);
+  </script>
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo"><img src="images/logo.png">AWINT 2027</div>
+      <nav class="nav-links">
+        <a href="index.html">HOMME</a>
+        <a href="orga.html">OWGANNIGWRAMME</a>
+        <a href="nous.html">LA TCHEAM</a>
+        <a href="events.html">EWENTS</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ABOUT (Sticky Image Scroll Section) -->
+    <section id="about" class="about-text-section">
+      <div class="about-text-container">
+        <h2>Owganisawtion owo</h2>
+        <p>
+          Vouuus voulews compwwehendre commwent fonctwionne notwe wiste ? OwO<br>
+          Voici notwe owganigwamme et mon intewpwetation infowmatik de celui-ci qui mawche suw owrdinateuw, et encowe
+          (>w<).
+        </p>
+      </div>
+    </section>
+
+
+
+
+    <section id="orga" class="orga-full-view">
+      <div class="orga-container" style="text-align: center; padding: 10px 0;">
+        <img src="images/orga.png" id="clickable-orga" alt="Organigramme">
+      </div>
+    </section>
+
+    <div id="image-viewer" class="image-overlay">
+      <span class="close-viewer">&times;</span>
+      <img class="viewer-content" id="full-image">
+    </div>
+
+
+
+
+    <section class="carousel-section">
+      <div class="scene">
+        <div class="carousel" id="carousel">
+          <!-- Sous-carousel 1 -->
+          <div class="carousel-wheel" data-wheel="0">
+            <div class="sub-carousel">
+              <img src="images/max.png">
+              <img src="images/math.png">
+              <img src="images/theo.png">
+              <img src="images/ilyes.png">
+              <img src="images/warren.png">
+            </div>
+          </div>
+          <!-- Sous-carousel 2 -->
+          <div class="carousel-wheel" data-wheel="1">
+            <div class="sub-carousel">
+              <img src="images/clementine.png">
+              <img src="images/aram.png">
+              <img src="images/clementine.png">
+              <img src="images/aram.png">
+              <img src="images/clementine.png">
+              <img src="images/aram.png">
+            </div>
+          </div>
+          <!-- Sous-carousel 3 -->
+          <div class="carousel-wheel" data-wheel="2">
+            <div class="sub-carousel">
+              <img src="images/leonard.png">
+              <img src="images/rayan_o.png">
+              <img src="images/leonard.png">
+              <img src="images/rayan_o.png">
+            </div>
+          </div>
+
+          <div class="carousel-wheel" data-wheel="3">
+            <div class="sub-carousel">
+              <img src="images/nabil.png">
+              <img src="images/swann.png">
+              <img src="images/maya.png">
+              <img src="images/ryan.png">
+            </div>
+          </div>
+
+
+          <div class="carousel-wheel" data-wheel="4">
+            <div class="sub-carousel">
+              <img src="images/chloe.png">
+              <img src="images/tim.png">
+              <img src="images/rayan_o.png">
+              <img src="images/janelle.png">
+            </div>
+          </div>
+
+          <div class="carousel-wheel" data-wheel="5">
+            <div class="sub-carousel">
+              <img src="images/pablo.png">
+              <img src="images/asma.png">
+              <img src="images/junior.png">
+              <img src="images/sam.png">
+            </div>
+          </div>
+
+          <div class="carousel-wheel" data-wheel="6">
+            <div class="sub-carousel">
+              <img src="images/adrien.png">
+              <img src="images/robinson.png">
+              <img src="images/adrien.png">
+              <img src="images/robinson.png">
+            </div>
+          </div>
+          <div class="carousel-wheel" data-wheel="7">
+            <div class="sub-carousel">
+              <img src="images/ajyad_fun.png">
+              <img src="images/assiya.png">
+              <img src="images/asma.png">
+            </div>
+          </div>
+          <div class="carousel-wheel" data-wheel="8">
+            <div class="sub-carousel">
+              <img src="images/antony.png">
+              <img src="images/gaetan.png">
+            </div>
+          </div>
+          <div class="carousel-wheel" data-wheel="9">
+            <div class="sub-carousel">
+              <img src="Cucco.png">
+              <img src="images/julia.png">
+            </div>
+          </div>
+          <div class="carousel-wheel" data-wheel="10">
+            <div class="sub-carousel">
+              <img src="poulet.png">
+              <img src="images/elio.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+  </main>
+
+  <footer class="footer">
+      <div class="footer-inner">
+      <div>
+        <div class="footer-label">mon snap owo</div>
+        <div>psdews@kentucky2026.fw
+        </div>
+      </div>
+      <div>
+        <div class="footer-label">Cwéateuw owo</div>
+        <div>psdews</div>
+      </div>
+      <div>
+        <div class="footer-label">wait gal</div>
+        <div>© 2067 owoINT</div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script>
+    (function initCarouselWheel() {
+
+      const carousel = document.getElementById("carousel");
+      const scene = document.querySelector(".scene");
+      const wheels = Array.from(carousel.querySelectorAll(".carousel-wheel"));
+      const total = wheels.length;
+      const mainAngle = 360 / total;
+      const mainRadius = 900;
+
+      // Zoom interactif
+      let perspective = 5000;
+      const minPerspective = -1000;
+      const maxPerspective = 400000;
+
+      function updateZoom() {
+        scene.style.perspective = `${perspective}px`;
+      }
+
+      // Placement des roues en cercle (carousel principal)
+      wheels.forEach((wheel, i) => {
+        wheel.style.transform = `rotateY(${i * mainAngle}deg) translateZ(${mainRadius}px)`;
+      });
+
+      // Initialisation des sous-carousels
+      const subCarousels = wheels.map((w) => w.querySelector(".sub-carousel"));
+      const subAngles = subCarousels.map(() => 0);
+
+      subCarousels.forEach((sub, wi) => {
+        const imgs = Array.from(sub.querySelectorAll("img"));
+        const n = imgs.length;
+        const subAngle = 360 / n;
+        const subRadius = 200;
+
+        imgs.forEach((img, j) => {
+          img.style.transform = `rotateY(${j * subAngle}deg) translateZ(${subRadius}px)`;
+        });
+      });
+
+
+
+
+
+
+      // Angles de rotation 3D
+      let rotateX = 0;
+      let rotateY = 0;
+      let isDragging = false;
+      let lastMouseX = 0;
+      let lastMouseY = 0;
+      let hasDragged = false;
+
+      function updateCarouselTransform() {
+        carousel.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      }
+
+      function getFrontWheelIndex() {
+        // Approximation basée sur rotateY
+        let idx = Math.round(rotateY / mainAngle) % total;
+        if (idx < 0) idx += total;
+        return idx;
+      }
+
+      function rotateSub(wheelIndex, direction) {
+        const sub = subCarousels[wheelIndex];
+        const n = sub.querySelectorAll("img").length;
+        const subAngle = 360 / n;
+        subAngles[wheelIndex] += direction * subAngle;
+        sub.style.transform = `rotateY(${subAngles[wheelIndex]}deg)`;
+      }
+
+      // Gestion du drag 3D
+      function handleMouseDown(e) {
+        isDragging = true;
+        hasDragged = false;
+        lastMouseX = e.clientX || e.touches[0].clientX;
+        lastMouseY = e.clientY || e.touches[0].clientY;
+        e.preventDefault();
+      }
+
+      function handleMouseMove(e) {
+        if (!isDragging) return;
+
+        hasDragged = true;
+        const currentX = e.clientX || e.touches[0].clientX;
+        const currentY = e.clientY || e.touches[0].clientY;
+
+        const deltaX = currentX - lastMouseX;
+        const deltaY = currentY - lastMouseY;
+
+        // Sensibilité de rotation
+        rotateY += deltaX * 0.5;
+        rotateX -= deltaY * 0.5;
+
+        // Limiter la rotation X pour éviter les inversions
+        rotateX = Math.max(-90, Math.min(90, rotateX));
+
+        updateCarouselTransform();
+
+        lastMouseX = currentX;
+        lastMouseY = currentY;
+        e.preventDefault();
+      }
+
+      function handleMouseUp(e) {
+        if (isDragging) {
+          isDragging = false;
+
+          // Si pas de drag, traiter comme un clic simple
+          if (!hasDragged) {
+            const target = e.target;
+            const carouselSection = document.querySelector(".carousel-section");
+
+
+            // Vérifier si on a cliqué sur une roue de sous-carousel
+            const clickedWheel = target.closest(".carousel-wheel");
+            if (clickedWheel && carouselSection.contains(clickedWheel)) {
+              // Trouver l'index de la roue cliquée
+              const wheelIndex = wheels.indexOf(clickedWheel);
+              if (wheelIndex !== -1) {
+                rotateSub(wheelIndex, 1);
+                return;
+              }
+            }
+
+            // Sinon, utiliser la logique de zones d'écran
+            const w = window.innerWidth;
+            const x = e.clientX || (e.changedTouches && e.changedTouches[0].clientX);
+            if (x) {
+              if (x < w * 0.33) {
+                rotateY += mainAngle;
+              } else if (x > w * 0.66) {
+                rotateY -= mainAngle;
+              } else {
+                rotateSub(getFrontWheelIndex(), 1);
+              }
+              updateCarouselTransform();
+            }
+          }
+        }
+      }
+
+      // Événements souris
+      document.addEventListener("mousedown", handleMouseDown);
+      document.addEventListener("mousemove", handleMouseMove);
+      document.addEventListener("mouseup", handleMouseUp);
+
+      // Événements tactiles
+      document.addEventListener("touchstart", handleMouseDown);
+      document.addEventListener("touchmove", handleMouseMove);
+      document.addEventListener("touchend", handleMouseUp);
+
+      // Raccourcis clavier
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") {
+          rotateY += mainAngle;
+          updateCarouselTransform();
+        }
+        if (e.key === "ArrowRight") {
+          rotateY -= mainAngle;
+          updateCarouselTransform();
+        }
+        if (e.key === "ArrowUp") {
+          rotateX = Math.max(-90, rotateX - 10);
+          updateCarouselTransform();
+        }
+        if (e.key === "ArrowDown") {
+          rotateX = Math.min(90, rotateX + 10);
+          updateCarouselTransform();
+        }
+        if (e.key === " ") {
+          rotateSub(getFrontWheelIndex(), 1);
+        }
+        // Zoom avec + et -
+        if (e.key === "+" || e.key === "=") {
+          perspective = Math.min(maxPerspective, perspective + 500);
+          updateZoom();
+        }
+        if (e.key === "-" || e.key === "_") {
+          perspective = Math.max(minPerspective, perspective - 500);
+          updateZoom();
+        }
+      });
+
+      // Zoom avec la molette de la souris
+      let lastPinchDistance = 0;
+
+      const carouselSection = document.querySelector(".carousel-section");
+      const navbar = document.querySelector(".navbar");
+
+      document.addEventListener("wheel", (e) => {
+        const rect = carouselSection.getBoundingClientRect();
+        const navRect = navbar.getBoundingClientRect();
+
+        // On vérifie si la souris est dans le carrousel 
+        // ET strictement en dessous de la limite basse de la navbar
+        const isInside = (
+          e.clientX >= rect.left &&
+          e.clientX <= rect.right &&
+          e.clientY >= rect.top &&
+          e.clientY <= rect.bottom &&
+          e.clientY > navRect.bottom // Exclut la zone couverte par la navbar
+        );
+
+        if (!isInside) return;
+
+        e.preventDefault();
+        const delta = e.deltaY > 0 ? 500 : -500;
+        perspective = Math.max(minPerspective, Math.min(maxPerspective, perspective + delta));
+        updateZoom();
+      }, { passive: false });
+
+      // Zoom avec pincement (touch)
+      document.addEventListener("touchmove", (e) => {
+        if (e.touches.length === 2 && lastPinchDistance > 0) {
+          // Vérifier si le premier doigt est sur le carrousel
+          const touch1 = e.touches[0];
+          const target = document.elementFromPoint(touch1.clientX, touch1.clientY);
+
+          if (carouselSection.contains(target)) {
+            e.preventDefault(); // Empêche le zoom natif du navigateur
+
+            const touch2 = e.touches[1];
+            const currentDistance = Math.hypot(
+              touch2.clientX - touch1.clientX,
+              touch2.clientY - touch1.clientY
+            );
+
+            const delta = (lastPinchDistance - currentDistance) * 10;
+            perspective = Math.max(minPerspective, Math.min(maxPerspective, perspective + delta));
+            updateZoom();
+
+            lastPinchDistance = currentDistance;
+          }
+        }
+      }, { passive: false });
+
+      updateCarouselTransform();
+      updateZoom();
+    })();
+
+
+    //pole 
+    function updateGallery(button, imgSrc, name, description) {
+      // 1. Find the specific section container (.exhibitions)
+      const section = button.closest('.exhibitions');
+
+      // 2. Find the image and text ONLY inside THIS section using classes
+      const mainImg = section.querySelector('.main-img');
+      const nameEl = section.querySelector('.member-name');
+      const textEl = section.querySelector('.member-text');
+      const container = section.querySelector('.description-container');
+
+      // Fade out effect
+      container.style.opacity = 0;
+      mainImg.style.opacity = 0.5;
+
+      setTimeout(() => {
+        // Update content within this section
+        mainImg.src = "images/" + imgSrc;
+        nameEl.innerText = name;
+        textEl.innerText = description;
+
+        // Fade back in
+        container.style.opacity = 1;
+        mainImg.style.opacity = 1;
+      }, 300);
+    }
+
+
+    const viewer = document.getElementById('image-viewer');
+    const clickableImg = document.getElementById('clickable-orga');
+    const fullImg = document.getElementById('full-image');
+    const closeBtn = document.querySelector('.close-viewer');
+
+    // Masquer l'overlay au chargement (car display: flex dans le CSS l'afficherait)
+    viewer.style.display = 'none';
+
+    // Ouvrir au clic sur l'image
+    clickableImg.onclick = function () {
+      viewer.style.display = 'flex';
+      fullImg.src = this.src;
+    }
+
+    // Fermer au clic sur la croix ou sur le fond noir
+    viewer.onclick = function (e) {
+      if (e.target !== fullImg) {
+        viewer.style.display = 'none';
+      }
+    }
+  </script>
+  <div id="image-viewer" class="image-overlay">
+    <span class="close-viewer">&times;</span>
+    <img class="viewer-content" id="full-image">
+  </div>
+
+</body>
+
+</html>
