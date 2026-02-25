@@ -199,10 +199,10 @@
       const wheels = Array.from(carousel.querySelectorAll(".carousel-wheel"));
       const total = wheels.length;
       const mainAngle = 360 / total;
-      const mainRadius = 900;
+      const mainRadius = 800;
 
       // ── Perspective / zoom ───────────────────────────────────────────────
-      let perspective = 5000;
+      let perspective = 3000;
       const minPerspective = 500;      // negative perspective is invalid in CSS
       const maxPerspective = 400000;
 
@@ -219,7 +219,7 @@
       const subCarousels = wheels.map(w => w.querySelector(".sub-carousel"));
       const subAngles = subCarousels.map(() => 0);
       const subCounts = subCarousels.map(sub => sub.querySelectorAll("img").length);
-      const subRadius = 200;
+      const subRadius = 300;
 
       subCarousels.forEach((sub, wi) => {
         const n = subCounts[wi];

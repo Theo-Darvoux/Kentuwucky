@@ -1,14 +1,20 @@
 /* RESET */
 :root {
-  --vh: 1vh; /* Will be set by JavaScript to fix viewport height on mobile */
+  --vh: 1vh;
+  /* Will be set by JavaScript to fix viewport height on mobile */
 
   /* Kawaii palette */
-  --bg: #fff6fb;         /* very pale pink */
-  --primary: #caa3ff;    /* kawaii violet */
-  --secondary: #ffbdd6;  /* pale pink accent */
-  --card-bg: #fff9ff;    /* ultra pale card background */
-  --text: #3a0d3a;       /* deep purple text for contrast */
-  --muted-text: rgba(58,13,58,0.85);
+  --bg: #fff6fb;
+  /* very pale pink */
+  --primary: #caa3ff;
+  /* kawaii violet */
+  --secondary: #ffbdd6;
+  /* pale pink accent */
+  --card-bg: #fff9ff;
+  /* ultra pale card background */
+  --text: #3a0d3a;
+  /* deep purple text for contrast */
+  --muted-text: rgba(58, 13, 58, 0.85);
   --nav-link-on-primary: #ffffff;
   --footer-bg: #efd9ff;
 }
@@ -29,22 +35,32 @@ body {
 
 /* NAVBAR */
 .navbar {
-  position: fixed; /* Keep it fixed relative to the screen */
+  position: fixed;
+  /* Keep it fixed relative to the screen */
   width: 100%;
   top: 0;
-  left: 0;         /* Ensure it starts from the very left */
+  left: 0;
+  /* Ensure it starts from the very left */
   padding: 24px 60px;
   background: var(--primary);
   backdrop-filter: blur(10px);
-  z-index: 9999;   /* Higher value ensures it stays above all other content */
+  z-index: 9999;
+  /* Higher value ensures it stays above all other content */
 }
+
 .logo img {
-  height: 90px;    /* Adjust this value to your liking */
-  width: auto;     /* Keeps the aspect ratio intact */
-  vertical-align: middle; /* Aligns it nicely with the text */
-  margin-right: 10px;    /* Adds some space between the logo and "ASINT 2027" */
-  cursor: wait; /* pourquoi pas */
+  height: 90px;
+  /* Adjust this value to your liking */
+  width: auto;
+  /* Keeps the aspect ratio intact */
+  vertical-align: middle;
+  /* Aligns it nicely with the text */
+  margin-right: 10px;
+  /* Adds some space between the logo and "ASINT 2027" */
+  cursor: wait;
+  /* pourquoi pas */
 }
+
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -111,15 +127,18 @@ body {
 
 /* SECTION TEXTE */
 .about-text-section {
-  padding-top: 200px; /* Augmentez cette valeur (ex: 150px ou 200px) */
+  padding-top: 200px;
+  /* Augmentez cette valeur (ex: 150px ou 200px) */
   padding-bottom: 80px;
-  text-align: center;  /* Centre le texte horizontalement */
+  text-align: center;
+  /* Centre le texte horizontalement */
   display: flex;
   justify-content: center;
 }
 
 .about-text-container {
-  max-width: 800px;    /* Limite la largeur pour la lisibilité */
+  max-width: 800px;
+  /* Limite la largeur pour la lisibilité */
 }
 
 .about-text-container h2 {
@@ -138,30 +157,37 @@ body {
 
 /* Style pour la séparation de l'organigramme */
 .orga-full-view {
-  padding: 100px 20px; /* Crée l'espace avec le Thème (haut) et le Carousel (bas) */
-  background: var(--bg);  /* Garde la couleur de fond du site */
+  padding: 100px 20px;
+  /* Crée l'espace avec le Thème (haut) et le Carousel (bas) */
+  background: var(--bg);
+  /* Garde la couleur de fond du site */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .orga-container {
-  max-width: 1200px;    /* Empêche l'image d'être trop immense sur très grand écran */
-  width: 100%;  
+  max-width: 1200px;
+  /* Empêche l'image d'être trop immense sur très grand écran */
+  width: 100%;
   text-align: center;
 }
 
 .orga-container img {
-  width: 100%;          /* S'adapte à la largeur du conteneur */
+  width: 100%;
+  /* S'adapte à la largeur du conteneur */
   height: auto;
-  border-radius: 15px;  /* Optionnel : petit arrondi pour le style */
-  box-shadow: 0 20px 50px rgba(58,13,58,0.12); /* Donne du relief par rapport au fond */
+  border-radius: 15px;
+  /* Optionnel : petit arrondi pour le style */
+  box-shadow: 0 20px 50px rgba(58, 13, 58, 0.12);
+  /* Donne du relief par rapport au fond */
 }
 
 /* Ajustement pour mobile */
 @media (max-width: 768px) {
   .orga-full-view {
-    padding: 60px 15px; /* Réduit l'espace sur mobile */
+    padding: 60px 15px;
+    /* Réduit l'espace sur mobile */
   }
 }
 
@@ -172,9 +198,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(58,13,58,0.92);
-  z-index: 9999; /* Très haut pour passer devant la navbar */
-  display: none; /* Changé en 'flex' par le JS */
+  background-color: rgba(58, 13, 58, 0.92);
+  z-index: 9999;
+  /* Très haut pour passer devant la navbar */
+  display: none;
+  /* Changé en 'flex' par le JS */
   align-items: center;
   justify-content: center;
 }
@@ -183,7 +211,7 @@ body {
 .viewer-content {
   max-width: 90%;
   max-height: 90%;
-  box-shadow: 0 0 20px rgba(58,13,58,0.12);
+  box-shadow: 0 0 20px rgba(58, 13, 58, 0.12);
 }
 
 /* Croix de fermeture */
@@ -198,28 +226,31 @@ body {
 
 /* SECTION CARROUSEL */
 .carousel-section {
-  height: calc(var(--vh) * 80);
+  height: calc(var(--vh) * 100);
   display: flex;
   justify-content: center;
   align-items: center;
   background: var(--bg);
   margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+  /* Constrain 3D content */
 }
 
 .scene {
   width: 240px;
   height: 320px;
   perspective: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-
 
 .carousel {
   position: absolute;
   transform-style: preserve-3d;
-  width: 0; 
-  height: 0;
-  /* This ensures the 'axis' of rotateY(rotateY) is the center of the box */
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -262,12 +293,15 @@ body {
 .exhibitions-left {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* This aligns the text to the beginning of the image */
+  align-items: flex-start;
+  /* This aligns the text to the beginning of the image */
 }
 
 .entete {
-  padding: 20px; /* Increased padding for more space around the box */
-  background-color: transparent; /* Let the section background show through */
+  padding: 20px;
+  /* Increased padding for more space around the box */
+  background-color: transparent;
+  /* Let the section background show through */
   display: flex;
   justify-content: center;
 }
@@ -278,24 +312,30 @@ body {
   -webkit-appearance: none;
   -moz-appearance: none;
 
-  
+
   white-space: normal;
-  background-color: var(--card-bg); /* The white/pale box */
-  color: var(--text);            /* Dark purple text for readability */
-  
+  background-color: var(--card-bg);
+  /* The white/pale box */
+  color: var(--text);
+  /* Dark purple text for readability */
+
   font-size: 1rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  
-  width: fit-content;           /* Let the box adjust to the text size */
-  min-width: 260px;      /* Prevents it from being too tiny for short words */
-  padding: 15px 45px 15px 25px; 
-  
+
+  width: fit-content;
+  /* Let the box adjust to the text size */
+  min-width: 260px;
+  /* Prevents it from being too tiny for short words */
+  padding: 15px 45px 15px 25px;
+
   border: none;
-  border-radius: 4px;       /* Sharp but slightly rounded corners */
-  box-shadow: 0 1px 15px rgba(202,163,255,0.25); /* Adds depth */
-  
+  border-radius: 4px;
+  /* Sharp but slightly rounded corners */
+  box-shadow: 0 1px 15px rgba(202, 163, 255, 0.25);
+  /* Adds depth */
+
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-overflow: visible;
@@ -305,7 +345,8 @@ body {
 #pole-select:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  background-color: #f0f0f0; /* Slight grey on hover */
+  background-color: #f0f0f0;
+  /* Slight grey on hover */
 }
 
 .exhibitions {
@@ -314,17 +355,24 @@ body {
 
 .exhibitions-container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Keep the 50/50 split */
+  grid-template-columns: 1fr 1fr;
+  /* Keep the 50/50 split */
   gap: 80px;
-  max-width: 1200px;      /* Prevents the section from becoming too wide */
-  margin: 0 auto;         /* Centers the entire grid on the page */
-  align-items: center;    /* Vertically aligns the left and right sides */
+  max-width: 1200px;
+  /* Prevents the section from becoming too wide */
+  margin: 0 auto;
+  /* Centers the entire grid on the page */
+  align-items: center;
+  /* Vertically aligns the left and right sides */
 }
 
 .exhibit-img {
-  width: 100%;       /* Takes full width of the left column */
-  max-width: 450px;  /* Limits the size on large screens */
-  height: auto;      /* Keeps the image proportional */
+  width: 100%;
+  /* Takes full width of the left column */
+  max-width: 450px;
+  /* Limits the size on large screens */
+  height: auto;
+  /* Keeps the image proportional */
   overflow: hidden;
   border-radius: 10px;
   display: flex;
@@ -392,7 +440,7 @@ body {
 /* FOOTER */
 .footer {
   padding: 100px 80px;
-  border-top: 1px solid rgba(58,13,58,0.08);
+  border-top: 1px solid rgba(58, 13, 58, 0.08);
   background-color: var(--footer-bg);
 }
 
@@ -427,6 +475,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
   /* Hero background size based only on device width (no cropping) */
   .hero {
     padding: 0 18px;
@@ -453,35 +502,43 @@ body {
   }
 
   /* Sticky photos: almost full width on phone */
-@media (max-width: 768px) {
-  .stack-section {
-    display: flex;
-    flex-direction: column; /* Force vertical flow */
-    align-items: center;
-    padding: 0 20px;
-    height: auto !important; /* Allow the section to grow with the photos */
-    margin-top: 120px;       /* Prevent navbar overlap */
-    overflow: visible;      /* Crucial for sticky positioning to work */
+  @media (max-width: 768px) {
+    .stack-section {
+      display: flex;
+      flex-direction: column;
+      /* Force vertical flow */
+      align-items: center;
+      padding: 0 20px;
+      height: auto !important;
+      /* Allow the section to grow with the photos */
+      margin-top: 120px;
+      /* Prevent navbar overlap */
+      overflow: visible;
+      /* Crucial for sticky positioning to work */
+    }
+
+    .photo-card {
+      position: sticky;
+      /* Re-enable sticky for the stacking effect */
+      top: 100px;
+      /* Distance from top of screen when it 'sticks' */
+      width: 90vw !important;
+      height: 60vh !important;
+      /* Give it a consistent height */
+      margin-bottom: 20vh;
+      /* Create space for the next card to slide up */
+
+      /* REMOVE THESE LINES FROM YOUR CSS: */
+      /* left: 50% !important; */
+      /* top: 50% !important; */
+      /* transform: translate(-50%, -50%) !important; */
+
+      /* Ensure cards are visible */
+      display: block !important;
+      opacity: 1 !important;
+    }
   }
 
-  .photo-card {
-    position: sticky;        /* Re-enable sticky for the stacking effect */
-    top: 100px;             /* Distance from top of screen when it 'sticks' */
-    width: 90vw !important;
-    height: 60vh !important; /* Give it a consistent height */
-    margin-bottom: 20vh;    /* Create space for the next card to slide up */
-    
-    /* REMOVE THESE LINES FROM YOUR CSS: */
-    /* left: 50% !important; */
-    /* top: 50% !important; */
-    /* transform: translate(-50%, -50%) !important; */
-    
-    /* Ensure cards are visible */
-    display: block !important;
-    opacity: 1 !important;
-  }
-}
-  
   .card-label {
     right: 14px;
     top: 14px;
@@ -494,23 +551,29 @@ body {
 
 /* Conteneur principal */
 .stack-section {
-  padding: 0 80px; /* Aligné avec votre design actuel */
+  padding: 0 80px;
+  /* Aligné avec votre design actuel */
   background: var(--bg);
 }
 
 /* Chaque carte photo */
 .photo-card {
   position: sticky;
-  top: 100px; /* Espace pour la navbar (environ 80px) + marge */
-  height: calc(var(--vh) * 80); /* Hauteur de l'image */
-  margin-bottom: 100px; /* Espace entre les photos pendant le scroll */
+  top: 100px;
+  /* Espace pour la navbar (environ 80px) + marge */
+  height: calc(var(--vh) * 80);
+  /* Hauteur de l'image */
+  margin-bottom: 100px;
+  /* Espace entre les photos pendant le scroll */
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   border-radius: 20px;
-  background: var(--card-bg); /* Fond pale pour kawaii */
+  background: var(--card-bg);
+  /* Fond pale pour kawaii */
 }
+
 /* Ensure the container can host absolute elements */
 
 
@@ -519,18 +582,21 @@ body {
   position: absolute;
   top: 20px;
   right: 30px;
-  z-index: 10; /* Ensures it stays above the image */
-  
+  z-index: 10;
+  /* Ensures it stays above the image */
+
   /* Styling to match your aesthetic */
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: white;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent bg for readability */
+  background: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent bg for readability */
   padding: 8px 12px;
   border-radius: 4px;
   backdrop-filter: blur(5px);
 }
+
 .photo-card img {
   width: 100%;
   height: 100%;
@@ -565,7 +631,7 @@ body {
 
 /* Optionnel : Petit effet d'ombre pour bien voir l'empilement */
 .photo-card {
-  box-shadow: 0 -20px 50px rgba(0,0,0,0.5);
+  box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -586,12 +652,14 @@ body {
   transition: opacity 0.3s ease-in-out;
 }
 
-.description-container, .main-img {
+.description-container,
+.main-img {
   transition: opacity 0.3s ease-in-out;
 }
 
 .member-text {
-  white-space: pre-line; /* Ensures your \n breaks work */
+  white-space: pre-line;
+  /* Ensures your \n breaks work */
 }
 
 /* Fullscreen image overlay */
@@ -631,7 +699,8 @@ body {
 .events-list-section {
   padding-top: 40px;
   padding-bottom: 200px;
-  background: var(--bg); /* Pale pink background */
+  background: var(--bg);
+  /* Pale pink background */
 }
 
 .section-title {
@@ -657,7 +726,8 @@ body {
 }
 
 .event-row:hover {
-  background: rgba(202,163,255,0.06); /* Soft violet hover */
+  background: rgba(202, 163, 255, 0.06);
+  /* Soft violet hover */
 }
 
 /* Left side: Date */
@@ -678,7 +748,8 @@ body {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--secondary); /* Pale pink highlight */
+  color: var(--secondary);
+  /* Pale pink highlight */
 }
 
 /* Right side: Description */
@@ -700,9 +771,12 @@ body {
 
 /* Style for past events */
 .event-row.past {
-  opacity: 0.4; /* Makes the text and date look faded */
-  filter: grayscale(80%); /* Optional: removes color for a more "gone by" feel */
-  pointer-events: none; /* Optional: makes them unclickable if they were links */
+  opacity: 0.4;
+  /* Makes the text and date look faded */
+  filter: grayscale(80%);
+  /* Optional: removes color for a more "gone by" feel */
+  pointer-events: none;
+  /* Optional: makes them unclickable if they were links */
 }
 
 /* Mobile adjustments */
@@ -710,7 +784,7 @@ body {
   .events-list-section {
     padding: 60px 20px;
   }
-  
+
   .event-info {
     margin-left: 30px;
   }
@@ -728,150 +802,207 @@ body {
 /*pour telephone*/
 @media (max-width: 768px) {
   .navbar {
-    padding: 15px 20px; /* Reduce padding on mobile */
+    padding: 15px 20px;
+    /* Reduce padding on mobile */
   }
-  
+
   .nav-container {
-    flex-direction: column; /* Stack logo and links vertically */
+    flex-direction: column;
+    /* Stack logo and links vertically */
     height: auto;
   }
 
   .nav-links a {
-    margin: 5px 10px; /* Smaller margins for links */
+    margin: 5px 10px;
+    /* Smaller margins for links */
     font-size: 10px;
   }
-  
+
   .logo img {
-    height: 50px; /* Shrink logo for small screens */
+    height: 50px;
+    /* Shrink logo for small screens */
   }
 }
+
 @media (max-width: 768px) {
   .exhibitions-container {
-    flex-direction: column; /* Stack image and description */
+    flex-direction: column;
+    /* Stack image and description */
   }
 
-  .exhibitions-left, .exhibitions-right {
-    width: 100%; /* Take full width */
+  .exhibitions-left,
+  .exhibitions-right {
+    width: 100%;
+    /* Take full width */
   }
 
   #pole-select {
-    max-width: 100%; /* Let the white box fill the screen */
+    max-width: 100%;
+    /* Let the white box fill the screen */
   }
 
   .thumbnail-grid {
-    justify-content: center; /* Center the member circles */
+    justify-content: center;
+    /* Center the member circles */
   }
 }
+
 @media (max-width: 480px) {
   .event-row {
-    flex-direction: column; /* Stack date above text */
+    flex-direction: column;
+    /* Stack date above text */
     align-items: flex-start;
   }
 
   .event-info {
-    margin-left: 0; /* Remove side margin */
+    margin-left: 0;
+    /* Remove side margin */
     margin-top: 15px;
   }
-  
+
   .event-date {
-    min-width: auto; /* Remove fixed width */
+    min-width: auto;
+    /* Remove fixed width */
   }
 }
+
 /* --- GLOBAL RESPONSIVE OVERRIDE --- */
 @media (max-width: 1024px) {
-    .navbar { padding: 20px 40px; }
-    .nav-links a { margin-left: 20px; }
-    .footer { padding: 80px 40px; }
+  .navbar {
+    padding: 20px 40px;
+  }
+
+  .nav-links a {
+    margin-left: 20px;
+  }
+
+  .footer {
+    padding: 80px 40px;
+  }
 }
 
 @media (max-width: 768px) {
-    /* Navbar: Stack or Simplify */
-    .nav-container {
-        flex-direction: column;
-        height: auto;
-        gap: 10px;
-    }
-    .nav-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-    .nav-links a {
-        margin-left: 0;
-        font-size: 10px;
-    }
-    .logo img { height: 60px; }
 
-    /* Main Content Spacing */
-    main { padding-top: 140px; } /* Prevent navbar overlap */
+  /* Navbar: Stack or Simplify */
+  .nav-container {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+  }
 
-    /* Footer: Stack Inner Items */
-    .footer-inner {
-        flex-direction: column;
-        gap: 40px;
-        text-align: center;
-    }
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    font-size: 10px;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+
+  /* Main Content Spacing */
+  main {
+    padding-top: 140px;
+  }
+
+  /* Prevent navbar overlap */
+
+  /* Footer: Stack Inner Items */
+  .footer-inner {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
 }
+
 @media (max-width: 768px) {
-    .hero-text h1 {
-        font-size: 15vw; /* Scales with screen width */
-        line-height: 1;
-    }
-    .about-text-container h2 {
-        font-size: 2rem;
-    }
-    .hero-social {
-        bottom: 20px;
-        right: 20px;
-        flex-direction: column;
-        align-items: flex-end;
-    }
+  .hero-text h1 {
+    font-size: 15vw;
+    /* Scales with screen width */
+    line-height: 1;
+  }
+
+  .about-text-container h2 {
+    font-size: 2rem;
+  }
+
+  .hero-social {
+    bottom: 20px;
+    right: 20px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
 }
+
 @media (max-width: 768px) {
-    .exhibitions-container {
-        flex-direction: column; /* Stacks the pôle content */
-    }
-    .exhibitions-left, .exhibitions-right {
-        width: 100%;
-    }
-    .exhibitions-right {
-        padding-top: 30px;
-    }
-    #pole-select {
-        max-width: 100%; /* White box fills the screen */
-    }
-    .thumbnail-grid {
-        justify-content: center; /* Center member circles on mobile */
-    }
-    .thumbnail-grid img {
-        width: 70px !important; /* Smaller thumbnails for mobile */
-        height: 70px !important;
-    }
+  .exhibitions-container {
+    flex-direction: column;
+    /* Stacks the pôle content */
+  }
+
+  .exhibitions-left,
+  .exhibitions-right {
+    width: 100%;
+  }
+
+  .exhibitions-right {
+    padding-top: 30px;
+  }
+
+  #pole-select {
+    max-width: 100%;
+    /* White box fills the screen */
+  }
+
+  .thumbnail-grid {
+    justify-content: center;
+    /* Center member circles on mobile */
+  }
+
+  .thumbnail-grid img {
+    width: 70px !important;
+    /* Smaller thumbnails for mobile */
+    height: 70px !important;
+  }
 }
+
 @media (max-width: 600px) {
-    .event-row {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px 0;
-    }
-    .event-info {
-        margin-left: 0;
-        margin-top: 15px;
-    }
-    .event-date {
-        flex-direction: row;
-        align-items: baseline;
-        gap: 10px;
-    }
-    .event-date .day { font-size: 30px; }
+  .event-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0;
+  }
+
+  .event-info {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .event-date {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .event-date .day {
+    font-size: 30px;
+  }
 }
+
 @media (max-width: 768px) {
-    #clickable-orga {
-        width: 100% !important;
-        height: auto !important;
-    }
-    #full-image {
-        width: 95vw; /* Ensure full-screen view doesn't clip */
-    }
+  #clickable-orga {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  #full-image {
+    width: 95vw;
+    /* Ensure full-screen view doesn't clip */
+  }
 }
